@@ -16,12 +16,12 @@
         }
 
         #portfolio li:hover {
-            background: #eee;
+            background: #7c1b1b;
         }
 
         #portfolio a {
             text-decoration: none;
-            color: #454545;
+            color: #ff0000;
         }
                     /* responsive web design */
                     @media screen and (min-width: 120px) and (max-width: 1080px) {
