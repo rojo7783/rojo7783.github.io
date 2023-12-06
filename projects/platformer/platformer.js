@@ -69,11 +69,11 @@ $(function () {
 });
 
   //Platforms//
-      createPlatform(175, 225, 1.00);
-      createPlatform(125, 200, 1.50);
-      createPlatform(25, 175,  1.00);
-      createPlatform(125, 150, 1.50);
-      createPlatform(175, 125, 1.50);
+      createPlatform(175, 225);
+      createPlatform(125, 200);
+      createPlatform(25, 175);
+      createPlatform(125, 150);
+      createPlatform(175, 125);
 
   //createCollectables
     createCollectable("grace", 200, 100);
