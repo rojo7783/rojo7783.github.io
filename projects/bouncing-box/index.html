@@ -64,7 +64,12 @@
 			// TODO 2 - Variable declarations 
 			var myVariable = someValue;
 
-			
+			myVariable = myVariable + 10;
+				var positionX = 0;
+				var points = 0;
+				var speed = 50;
+
+
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
@@ -72,37 +77,21 @@
 			*/
 			function update() {
 				
-				myVariable = myVariable + 10;
-				var positionX = 0;
 				
-				var speed = 10;
-				
-				positionX = 0 + 10;
-				moveBoxTo(positionX);
-				
-				positionX = 0 + 20;
-				moveBoxTo(positionX);
-				
-				positionX = 0; 
-				
-				positionX = 0 + 30;
-				moveBoxTo(positionX);
-				
-				positionX = 0 + 40;
+				positionX = positionX + speed;
 				moveBoxTo(positionX);
 				
 				
-				positionX = 0 + 50;
-				moveBoxTo(positionX);
-				
-				positionX = 0 + 60;
-				moveBoxTo(positionX);
 
-				
-				positionX = 0 + 70;
-				moveBoxTo(positionX);
+				if (positionX > boardWidth) 
+						{speed + -speed;}
 
-			};
+				if (positionX < 0)
+						{speed = -speed;}
+			
+			   
+
+			}
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -111,9 +100,18 @@
 			*/
 			function handleBoxClick() {
 			positionX = 0;	
-			changeBoxText(1);
+			points = points + 1;
 			changeBoxText(points);
+			if ((speed) => 0) {
+					speed = speed +4;
+			}
 
+			if ((speed) => 0) {
+				speed = speed -4;
+			}
+			var colorStr = "rgb(0, 128, 128)";
+			box.css("backgrouns-color", colorStr);
+			
 			};
 		})();
 	</script>
